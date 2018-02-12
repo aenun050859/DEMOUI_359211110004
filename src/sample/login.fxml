@@ -47,6 +47,6 @@
       </ImageView>
       <Label layoutX="268.0" layoutY="356.0" text="DB Status" />
       <Label fx:id="dbStatus" layoutX="332.0" layoutY="356.0" prefHeight="17.0" prefWidth="154.0" textFill="#ee0b88" />
-      <JFXButton fx:id="btnLogin" layoutX="383.0" layoutY="185.0" style="-fx-background-color: #fff59d;" text="Login" />
+      <JFXButton fx:id="btnLogin" layoutX="383.0" layoutY="185.0" onAction="#Login" style="-fx-background-color: #fff59d;" text="Login" />
    </children>
 </AnchorPane>
