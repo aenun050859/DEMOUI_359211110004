@@ -35,7 +35,7 @@ public class loginModel {
         try {
             pr = this.connection.prepareStatement(sql);
             pr.setString(2, user);
-            pr.setString(2, pass);
+            pr.setString(3, pass);
 
             rs = pr.executeQuery();
 
