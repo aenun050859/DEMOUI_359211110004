@@ -6,18 +6,17 @@ import java.sql.SQLException;
 
 public class dbConnection {
 
-    private static final String SOCONN =
-            "jdbc:sqlite:school.sqlite";
+    private static final String SQCONN =
+            "jdbc:sqlite:src/school.sqlite";
 
     public static Connection getConnection() throws SQLException {
         try {
-            Class.forName("org.sqlite.JDBC");
-            return DriverManager.getConnection(SOCONN)
+            Class.forName("ort.sqlite.JDBC");
+            return DriverManager.getConnection(SQCONN);
         }catch (ClassNotFoundException ex){
             ex.printStackTrace();
         }
+
         return null;
-
     }//getConnection
-
 }//class
