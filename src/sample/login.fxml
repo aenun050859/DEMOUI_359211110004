@@ -31,8 +31,14 @@
             </Label>
          </children>
       </Pane>
-      <JFXTextField fx:id="username" labelFloat="true" layoutX="307.0" layoutY="63.0" prefHeight="37.0" prefWidth="135.0" promptText="username" />
-      <JFXPasswordField fx:id="password" labelFloat="true" layoutX="307.0" layoutY="126.0" prefHeight="37.0" prefWidth="135.0" promptText="password" />
+      <JFXTextField fx:id="username" labelFloat="true" layoutX="307.0" layoutY="63.0" prefHeight="37.0" prefWidth="135.0" promptText="username">
+         <font>
+            <Font size="16.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="password" labelFloat="true" layoutX="307.0" layoutY="126.0" prefHeight="37.0" prefWidth="135.0" promptText="password">
+         <font>
+            <Font size="16.0" />
+         </font></JFXPasswordField>
       <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="264.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="264.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="264.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">

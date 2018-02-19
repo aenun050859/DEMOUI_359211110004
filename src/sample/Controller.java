@@ -1,9 +1,11 @@
 package sample;
 
+import Admin.AdminContrcller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -37,7 +39,7 @@ public class Controller implements Initializable {
         }
 
 
-    }//initializable
+    }//initialize
 
     @FXML
     public void Login(ActionEvent event){
@@ -46,9 +48,12 @@ public class Controller implements Initializable {
                     this.password.getText())){
                 Stage stage = (Stage) this.btnLogin.getScene().getWindow();
                 stage.close();
+
+                adminLogin();
+
             } else {
                 JOptionPane.showMessageDialog(null,"Your username or " +
-                "password is not corrected");
+                "password is invalid.");
             }
         }catch (Exception localException){
             localException.printStackTrace();
@@ -58,12 +63,24 @@ public class Controller implements Initializable {
         try{
             Stage adminStage = new Stage();
             FXMLLoader adminLoader = new FXMLLoader();
-            Pane adminRoot = adminLoader.load(getClass().getResource("" +
-                    "/Admin/AdminDashBoard.fxml").openStream());
+            Pane adminRoot = adminLoader.load(getClass().getResource("" + "/Admin/AdminDashBoard.fxml").openStream());
+
+            AdminContrcller adminContrcller = (AdminContrcller) adminLoader.getController();
+            Scene scene = new Scene(adminRoot);
+            adminStage.setScene(scene);
+            adminStage.setTitle("Admin Dashboard");
+            adminStage.setResizable(false);
+            adminStage.show();
+
+
+
+
+
         } catch (IOException ex){
             ex.printStackTrace();
         }
-        JOptionPane.showMessageDialog(null,"Welcome to our System.");
-    }
+//        JOptionPane.showMessageDialog(null,
+//                "Welcome to Our System.");
+    }//adminLogin
 
 }
